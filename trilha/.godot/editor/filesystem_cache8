@@ -1,0 +1,16 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1721847307
+icon.svg::CompressedTexture2D::1060019382930029954::1721833923::1721833965::1::::<><>::
+Passaro.gd::GDScript::-1::1721841609::0::1::::<>CharacterBody2D<>::
+passaro.tscn::PackedScene::4273799474322076056::1721846970::0::1::::<><>::res://Passaro.gd<>uid://dqb1faan6fuis::::res://addons/assets/bird1.png<>uid://5gshf7wdkmf3::::res://addons/assets/bird2.png<>uid://trtofmjpc1k3::::res://addons/assets/bird3.png
+scene.gd::GDScript::-1::1721846970::0::1::::<>Node2D<>::
+scene.tscn::PackedScene::6391677846417723876::1721846969::0::1::::<><>::uid://cx0e1f1xsmdf::::res://addons/assets/bg.png<>res://scene.gd<>uid://b15i388v7v8h5::::res://passaro.tscn<>uid://qrn8jt07vopk::::res://chao.tscn
+::res://addons/::1721837337
+::res://addons/assets/::1721837338
+bg.png::CompressedTexture2D::189384818158124827::1721837337::1721837338::1::::<><>::
+bird1.png::CompressedTexture2D::8285935498455640490::1721837337::1721837337::1::::<><>::
+bird2.png::CompressedTexture2D::2119157295146948278::1721837337::1721837337::1::::<><>::
+bird3.png::CompressedTexture2D::1369861356502339448::1721837337::1721837337::1::::<><>::
+ground.png::CompressedTexture2D::3424593593769766530::1721837337::1721837337::1::::<><>::
+pipe.png::CompressedTexture2D::2058496118511901966::1721837337::1721837337::1::::<><>::
+restart.png::CompressedTexture2D::905296880281734666::1721837337::1721837337::1::::<><>::

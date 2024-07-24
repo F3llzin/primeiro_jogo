@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxcgaalt15lls"]
+
+[ext_resource type="Texture2D" uid="uid://cx0e1f1xsmdf" path="res://addons/assets/bg.png" id="1_3ylth"]
+[ext_resource type="Script" path="res://scene.gd" id="1_l34u2"]
+[ext_resource type="PackedScene" uid="uid://fd6mnee23oxs" path="res://pipe.tscn" id="2_hh38r"]
+[ext_resource type="PackedScene" uid="uid://dhsrhuajywyj3" path="res://chao.tscn" id="4_i1ms3"]
+[ext_resource type="PackedScene" uid="uid://b15i388v7v8h5" path="res://passaro.tscn" id="4_n8tsr"]
+[ext_resource type="PackedScene" uid="uid://cv3guxvo6jdy3" path="res://gameover.tscn" id="6_fuov7"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(0, -4)
+script = ExtResource("1_l34u2")
+pipe_scene = ExtResource("2_hh38r")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(432, 384)
+texture = ExtResource("1_3ylth")
+
+[node name="Passaro" parent="." instance=ExtResource("4_n8tsr")]
+
+[node name="chao" parent="." instance=ExtResource("4_i1ms3")]
+z_index = 1
+
+[node name="PipeTimer" type="Timer" parent="."]
+
+[node name="score" type="Label" parent="."]
+z_index = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 339.0
+offset_right = 516.0
+offset_bottom = 55.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "Pontos: 0"
+
+[node name="gameover" parent="." instance=ExtResource("6_fuov7")]
+
+[connection signal="hit" from="chao" to="." method="_on_chao_hit"]
+[connection signal="timeout" from="PipeTimer" to="." method="_on_pipe_timer_timeout"]
+[connection signal="restart" from="gameover" to="." method="_on_gameover_restart"]

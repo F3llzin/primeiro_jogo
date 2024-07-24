@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://b15i388v7v8h5"]
+
+[ext_resource type="Script" path="res://Passaro.gd" id="1_vbkok"]
+[ext_resource type="Texture2D" uid="uid://dqb1faan6fuis" path="res://addons/assets/bird1.png" id="2_ceb5l"]
+[ext_resource type="Texture2D" uid="uid://5gshf7wdkmf3" path="res://addons/assets/bird2.png" id="3_cj2jl"]
+[ext_resource type="Texture2D" uid="uid://trtofmjpc1k3" path="res://addons/assets/bird3.png" id="4_kltor"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rn5fo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ceb5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cj2jl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kltor")
+}],
+"loop": true,
+"name": &"voar",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yjch0"]
+radius = 16.0
+height = 46.0
+
+[node name="Passaro" type="CharacterBody2D"]
+script = ExtResource("1_vbkok")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rn5fo")
+animation = &"voar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_yjch0")
